@@ -1,0 +1,248 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(to bottom left, #ffd0b8, #e2b6ff);
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.left {
+  width: 26%;
+  height: 100%;
+  color: black;
+  text-align: center;
+}
+
+.right {
+  width: 74%;
+  height: 100vh;
+  color: #24301f;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+}
+
+.bubble {
+  background-color: rgba(0,0,0,0.65);
+  color: white;
+  border-radius: 3vw;
+  margin-top: 7.96%;
+  width: 81.5%;
+  height: 90%;
+  justify-self: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.bubblecontents {
+  width: 100%;
+  height: 100%;
+  padding-top: 5%;
+  font-size: 2.2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.bubblecontents > p {
+  margin-bottom: 5%;
+}
+
+.button {
+  background-color: #fff1fe;
+  color: #333;
+  border-radius: 1.2vw;
+  width: 70%;
+  height: 6.5%;
+  margin: 9% 0 8% 0;
+  text-align: left;
+  padding: 4% 0 0 5%;
+  font-size: 1.4vw;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: width 0.36s ease, height 0.36s ease, padding 0.36s ease, font-size 0.36s ease, transform 0.36s ease, opacity 0.24s ease;
+}
+
+.button:hover {
+  width: 72.5%;
+  height: 7%;
+  padding-left: 5.5%;
+  font-size: 1.5vw;
+}
+
+.bubblecontents.overlay-open .button:not(.hidden) {
+  opacity: 0.12;
+  pointer-events: none;
+  transform: translateY(6px) scale(0.995);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.button.hidden {
+  visibility: hidden;
+}
+
+.button-flyout {
+  position: absolute;
+  background-color: #fff1fe;
+  color: #333;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.22);
+  border-radius: 1.2vw;
+  overflow: hidden;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  transition: top 420ms cubic-bezier(.22,.9,.37,1), left 420ms cubic-bezier(.22,.9,.37,1), width 420ms cubic-bezier(.22,.9,.37,1), height 420ms cubic-bezier(.22,.9,.37,1), border-radius 320ms ease, padding 360ms ease, font-size 360ms ease;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.button-flyout .button-content {
+  opacity: 0;
+  transition: opacity 200ms ease;
+  padding-right: 1rem;
+}
+
+.button-flyout.expanded .button-content {
+  opacity: 1;
+}
+
+.button-flyout .button-title {
+  margin-bottom: 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.info {
+  margin-top: auto;
+  margin-bottom: 10%;
+  font-size: 1.4vw;
+}
+
+.divider {
+  margin: 0.5rem 0;
+  padding-top: 0.5rem;
+  font-size: 1vw;
+  color: #222;
+}
+
+.switch {
+  margin-top: 15%;
+  margin-bottom: 5%;
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.3s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4cd964;
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+.datetime {
+  margin-top: 10vh;
+  font-size: 3.1vh;
+  margin-bottom: 4vh;
+}
+
+.countdown {
+  font-size: 7.5vh;
+  margin-bottom: 4vh;
+}
+
+.schoolDays {
+  font-size: 3.1vh;
+  margin-bottom: 6vh;
+}
+
+#percent {
+  font-size: 2.7vh;
+  margin-bottom: 2vh;
+}
+
+.bar, .periodBar {
+  position: relative;
+  background-color: #24301f;
+  border-radius: 20px;
+  height: 1.8vh;
+  width: 80%;
+  margin-bottom: 6vh;
+  overflow: hidden;
+}
+
+#progress, #periodProgress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #4d6942;
+  border-radius: 20px;
+  width: 60%;
+}
+
+.periodBar {
+  width: 50%;
+}
+
+.weeksMonths {
+  font-size: 3.1vh;
+  margin-bottom: 6vh;
+}
+
+#period {
+  font-size: 4.7vh;
+  margin-bottom: 6vh;
+}
+
+#periodTime {
+  font-size: 3.1vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
