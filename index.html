@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Hourglass</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="left">
+      <div class="bubble">
+        <div class="bubblecontents">
+          <p>⏳ Hourglass ⏳</p>
+          <div class="button">
+            <div class="button-title">Schedule</div>
+              <div class="button-content">
+                <div class="divider">
+                Toggle between first and second lunch schedules
+                <label class="switch">
+                  <input type="checkbox" class="toggle">
+                  <span class="slider"></span>
+                </label>
+                <p class="status">First Lunch</p>
+                <br>(This doesn't save when you close this tab)
+                </div>
+              </div>
+            </div>
+            <div class="button">
+              <div class="button-title">Themes</div>
+              <div class="button-content">
+                <div class="divider">Coming soon</div>
+              </div>
+            </div>
+            <div class="button">
+              <div class="button-title">About</div>
+              <div class="button-content">
+                <div class="divider">Hourglass was released on Oct. 13 2025.<br><br>This is the fourth edition of the Countdown to Summer project, which began on Feb. 28 2023.</div>
+              </div>
+            </div>
+          <div class="info">
+            <p>by me</p>
+            <p>Beta Oct. 13 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+    <div class="datetime"><a id="weekDay">Monday</a> - <a id="date">Oct. 13</a> - <a id="time">12:30 am</a></div>
+    <div class="countdown"><a id="days">235</a>d <a id="hours">23</a>h <a id="minutes">59</a>m <a id="seconds">55</a>s</div>
+    <div class="schoolDays"><a id="schoolDays">145</a> school days (including today)</div>
+    <div id="percent">60%</div>
+    <div class="bar">
+    <div id="progress"></div>
+    </div>
+    <div class="weeksMonths">week <a id="weeks">18</a> of 36&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="months">4</a> months left</div>
+    <div id="period">Period 6</div>
+    <div class="periodBar">
+    <div id="periodProgress"></div>
+    </div>
+    <div id="periodTime"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
