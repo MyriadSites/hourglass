@@ -7,33 +7,33 @@ let schedules;
 
 function updateBackground() {
   if (themesSetting) {
-    document.body.style.background = "linear-gradient(to bottom left, #aaa, #000)";
+    document.body.style.background = "linear-gradient(to bottom left, #b8e4ff, #ffd0b8)";
     document.querySelectorAll('.right').forEach(element => {
-      element.style.color = '#fff';
+      element.style.color = '#333';
     });
     document.querySelectorAll('.bubble').forEach(element => {
-      element.style.backgroundColor = 'rgba(255,255,255,0.65)';
-      element.style.color = '#000';
+      element.style.backgroundColor = 'rgba(255,255,255,0.75)';
+      element.style.color = '#333';
     });
     document.querySelectorAll('.button').forEach(element => {
-      element.style.backgroundColor = '#333';
-      element.style.color = '#fff';
+      element.style.backgroundColor = '#ddd';
+      element.style.color = '#333';
     });
     document.querySelectorAll('.button-flyout').forEach(element => {
-      element.style.backgroundColor = '#333';
-      element.style.color = '#fff';
+      element.style.backgroundColor = '#ddd';
+      element.style.color = '#333';
     });
     document.querySelectorAll('.divider').forEach(element => {
-      element.style.color = '#fff';
+      element.style.color = '#333';
     });
     document.querySelectorAll('.bar').forEach(element => {
-      element.style.backgroundColor = '#fff';
+      element.style.backgroundColor = '#f0f5ff';
     });
     document.querySelectorAll('.periodBar').forEach(element => {
-      element.style.backgroundColor = '#fff';
+      element.style.backgroundColor = '#f0f5ff';
     });
-    document.getElementById("progress").style.backgroundColor = "#999";
-    document.getElementById("periodProgress").style.backgroundColor = "#999";
+    document.getElementById("progress").style.backgroundColor = "#94a9b5";
+    document.getElementById("periodProgress").style.backgroundColor = "#94a9b5";
   } else {
     document.body.style.background = "linear-gradient(to bottom left, #ffd0b8, #e2b6ff)";
     document.querySelectorAll('.right').forEach(element => {
