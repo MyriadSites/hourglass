@@ -2,6 +2,7 @@ const startDate = new Date("2025-09-02T07:30:00");
 const endDate = new Date("2026-06-11T14:30:00");
 
 let setting = false;
+let themesSetting = false;
 let schedules;
 
 function getScheduleData() {
@@ -316,7 +317,7 @@ function updateClock() {
   
   const schoolDays = getSchoolDaysRemaining(endDate, specialDays);
   document.getElementById("schoolDays").textContent = schoolDays;
-  
+
   const percent = getProgressPercent(startDate, endDate);
   document.getElementById("percent").textContent = percent + "%";
   document.getElementById("progress").style.width = percent + "%";
@@ -429,6 +430,20 @@ getCurrentSectionAndRemaining();
     toggle.addEventListener('change', () => {
       setting = toggle.checked;
       status.textContent = (setting ? "Second Lunch" : "First Lunch");
+    });
+  }
+  
+  const themesToggle = overlay.querySelector('.themesToggle');
+  const themesStatus = overlay.querySelector('.themesStatus');
+  
+  if (themesToggle && themesStatus) {
+    themesToggle.checked = themesSetting;
+    
+    themesStatus.textContent = (themesSetting ? "Test theme" : "Default theme");
+    
+    themesToggle.addEventListener('change', () => {
+      themesSetting = themesToggle.checked;
+      themesStatus.textContent = (themesSetting ? "Test theme" : "Default theme");
     });
   }
   
