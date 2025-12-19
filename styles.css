@@ -68,7 +68,7 @@ body {
   margin: 9% 0 8% 0;
   text-align: left;
   padding: 4% 0 0 5%;
-  font-size: 1.4vw;
+  font-size: 3.2vh;
   cursor: pointer;
   overflow: hidden;
   position: relative;
@@ -79,7 +79,7 @@ body {
   width: 72.5%;
   height: 7%;
   padding-left: 5.5%;
-  font-size: 1.5vw;
+  font-size: 3.4vh;
 }
 
 .bubblecontents.overlay-open .button:not(.hidden) {
@@ -148,6 +148,19 @@ body {
 }
 
 .switch input {
+  display: none;
+}
+
+.themesSwitch {
+  margin-top: 15%;
+  margin-bottom: 5%;
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.themesSwitch input {
   display: none;
 }
 
