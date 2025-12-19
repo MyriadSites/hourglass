@@ -1,9 +1,20 @@
 const startDate = new Date("2025-09-02T07:30:00");
 const endDate = new Date("2026-06-11T14:30:00");
+const body = document.body;
 
 let setting = false;
 let themesSetting = false;
 let schedules;
+
+function updateBackground() {
+  if (themesSetting) {
+    body.classList.remove('default-theme');
+    body.classList.add('test-theme');
+  } else {
+    body.classList.remove('test-theme');
+    body.classList.add('default-theme');
+  }
+}
 
 function getScheduleData() {
   if (!setting) {
@@ -516,7 +527,7 @@ getCurrentSectionAndRemaining();
     if (e.key === 'Escape' && overlay) collapseOverlay();
   });
 })();
-  
+
 setInterval(() => {
   updateClock();
   getCurrentSectionAndRemaining();
