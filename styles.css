@@ -5,12 +5,21 @@ html, body {
 
 body {
   background: linear-gradient(to bottom left, #ffd0b8, #e2b6ff);
+  transition: background 0.5s;
   background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+}
+
+.default-theme {
+  background: linear-gradient(to bottom left, #ffd0b8, #e2b6ff);
+}
+
+.test-theme {
+  background: linear-gradient(to bottom left, #b8e4ff, #ffd0b8);
 }
 
 .left {
